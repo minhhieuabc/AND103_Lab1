@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".Register">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Đăng nhập với số điện thoại"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:textColor="@color/black"
+        android:gravity="center_horizontal"
+        android:layout_marginBottom="50dp"/>
+    <EditText
+        android:id="@+id/edPhoneNumber"
+        android:layout_width="330dp"
+        android:layout_height="60dp"
+        android:paddingLeft="15dp"
+        android:inputType="text"
+        android:hint="Số điện thoại"
+        android:background="@drawable/edit_input"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="20dp"/>
+    <Button
+        android:id="@+id/btnGetOTP"
+        android:layout_width="330dp"
+        android:layout_height="50dp"
+        android:text="Lấy mã OTP"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:background="#FE5A1D"
+        android:textAllCaps="false"/>
+
+    <EditText
+        android:id="@+id/edOTP"
+        android:layout_width="330dp"
+        android:layout_height="60dp"
+        android:paddingLeft="15dp"
+        android:inputType="textPassword"
+        android:hint="Mã OTP"
+        android:background="@drawable/edit_input"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="20dp"/>
+    <Button
+        android:id="@+id/btnSignInPhone"
+        android:layout_width="330dp"
+        android:layout_height="50dp"
+        android:text="Đăng nhập"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textAllCaps="false"
+        android:background="#6082B6"/>
+
+
+</LinearLayout>
