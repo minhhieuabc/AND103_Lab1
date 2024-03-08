@@ -1,20 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center"
+
     tools:context=".Home">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Thêm thành phố"
+            android:textStyle="bold"
+            android:textSize="40sp"
+            android:textColor="@color/black"
+            android:gravity="center_horizontal"
+            android:layout_marginBottom="30dp"/>
+        <EditText
+            android:id="@+id/edName"
+            android:layout_width="330dp"
+            android:layout_height="60dp"
+            android:paddingLeft="15dp"
+            android:inputType="text"
+            android:hint="Tên thành phố"
+            android:background="@drawable/edit_input"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="20dp"/>
+        <EditText
+            android:id="@+id/edCountry"
+            android:layout_width="330dp"
+            android:layout_height="60dp"
+            android:paddingLeft="15dp"
+            android:inputType="text"
+            android:hint="Tên quốc gia"
+            android:background="@drawable/edit_input"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="20dp"/>
+        <EditText
+            android:id="@+id/edPopulation"
+            android:layout_width="330dp"
+            android:layout_height="60dp"
+            android:paddingLeft="15dp"
+            android:inputType="number"
+            android:hint="Dân số"
+            android:background="@drawable/edit_input"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="20dp"/>
+        <Button
+            android:id="@+id/btnAdd"
+            android:layout_width="330dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="20dp"
+            android:text="Thêm"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:background="#FE5A1D"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcvCity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-    <Button
-        android:id="@+id/btnSignOut"
-        android:layout_width="330dp"
-        android:layout_height="50dp"
-        android:text="Đăng xuất"
-        android:textSize="20sp"
-        android:background="#C0C0C0"
-        android:textAllCaps="false"/>
+        </androidx.recyclerview.widget.RecyclerView>
+        <Button
+            android:id="@+id/btnSignOut"
+            android:layout_width="330dp"
+            android:layout_height="50dp"
+            android:text="Đăng xuất"
+            android:textSize="20sp"
+            android:background="#C0C0C0"
+            android:textAllCaps="false"
+            android:layout_marginTop="20dp"/>
+    </LinearLayout>
 
-</androidx.appcompat.widget.LinearLayoutCompat>
+
+</ScrollView>

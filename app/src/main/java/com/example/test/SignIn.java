@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -20,6 +21,7 @@ public class SignIn extends AppCompatActivity {
     private FirebaseAuth mAuth;
     EditText edEmailSignIn, edPassSignIn;
     Button btnSignIn, btnSignUp;
+    ImageView imgBackEmail;
     ProgressDialog progressDialog;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +36,7 @@ public class SignIn extends AppCompatActivity {
         edPassSignIn = findViewById(R.id.edPassWordSignIn);
         btnSignIn = findViewById(R.id.btnSignIn);
         btnSignUp = findViewById(R.id.btnSignUp);
+        imgBackEmail = findViewById(R.id.imgBackEmail);
         progressDialog = new ProgressDialog(this);
         progressDialog.setMessage("Vui lòng chờ");
     }
@@ -50,6 +53,13 @@ public class SignIn extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 SignIn();
+            }
+        });
+        imgBackEmail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(SignIn.this, MainActivity.class);
+                startActivity(intent);
             }
         });
     }

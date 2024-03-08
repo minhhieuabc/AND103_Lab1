@@ -75,7 +75,7 @@
             android:id="@+id/btnBack"
             android:layout_width="140dp"
             android:layout_height="50dp"
-            android:text="Hủy"
+            android:text="Đăng nhập"
             android:textColor="@color/white"
             android:textSize="20sp"
             android:background="#C0C0C0"

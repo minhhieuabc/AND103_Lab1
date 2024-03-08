@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -29,6 +30,7 @@ public class SignInPhone extends AppCompatActivity {
     private String mVerificationId;
     EditText edPhoneNumber, edOTP;
     Button btnSignPhone, btnGetOTP;
+    ImageView imgBackPhone;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,6 +65,7 @@ public class SignInPhone extends AppCompatActivity {
         edOTP = findViewById(R.id.edOTP);
         btnGetOTP = findViewById(R.id.btnGetOTP);
         btnSignPhone = findViewById(R.id.btnSignInPhone);
+        imgBackPhone = findViewById(R.id.imgBackPhone);
     }
 
     private void initListener(){
@@ -79,6 +82,13 @@ public class SignInPhone extends AppCompatActivity {
             public void onClick(View view) {
                 String otp = edOTP.getText().toString().trim();
                 verifyOTP(otp);
+            }
+        });
+        imgBackPhone.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(SignInPhone.this, MainActivity.class);
+                startActivity(intent);
             }
         });
     }

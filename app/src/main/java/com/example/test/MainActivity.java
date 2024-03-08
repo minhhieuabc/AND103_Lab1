@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, SignIn.class);
                 startActivity(intent);
+                finish();
             }
         });
         btnPhone.setOnClickListener(new View.OnClickListener() {
@@ -35,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, SignInPhone.class);
                 startActivity(intent);
+                finish();
             }
         });
     }
